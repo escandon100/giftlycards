@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+a{
+    color: #9ca3ad;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+}
+.btn{
+    background-color:#1d4ed8;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 2rem;
+}
+#nav{
+    font-family: "Noto Color Emoji", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    background-color: #111827;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 15px;
+  
+}
+.logo{
+    height: 60px;
+    width: 60px;
+    margin-right: 10px;
+}
+.nav_brand{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+.brand{
+    margin-left: 20px;
+    display: inline-flex;
+}
+
+.nav_item{
+    font-size: 1.5rem;
+
+}
+
+.nav_items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+#home{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding-top: 150px;
+    padding-left: 50px;
+}
+.home_text{
+
+    font-family: "Noto Color Emoji", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.home_text h1{
+    font-weight: 800;
+    font-size: 3rem;
+}
+.home_text p{
+    color: lightgrey;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+.home_img{
+    width: 100%;
+    padding-right: 0;
+
+}
