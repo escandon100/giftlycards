@@ -22,6 +22,7 @@
 body{   
     min-height: 100vh;
     box-sizing: border-box;
+    position: relative;
 }
 
 
@@ -161,152 +162,6 @@ a:hover{
 
 
 /* card styling css */
-
-#card{
-    background-color: #111827;
-    color: white;
-    font-family: var(--font-family);
-    font-weight: 400;
-    padding: 200px;
-}
-.card_form{
-    font-family: var(--font-family);
-    border-radius: var(--border-radius);
-    background-color: #1f2937;
-    text-align: left;
-    padding: 50px;
-    width: 70%;
-    margin: 10px auto 10px auto;
-}
-.card_form p{
-    color: #7c7d7d;
-    font-size: 1.5rem;
-    
-}
-.card_form h3{
-    font-weight: 700;
-    font-size: 32px;
-}
-
-.cardform_btn{
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.card_form button{
-    background-color: #31aeef;
-    border: none;
-    border-radius: 10px;
-    color: var(--text-color);
-    height: 50px;
-    font-size: 16px;
-    width: 10%;
-}
-.card_form button:hover{
-    background-color: var(--btn-background-color);
-}
-#cards{
-    width: 95%;
-    height: 65px;
-    border-radius: 30px;
-    border: var(--border-outline);
-    margin-top : 30px ; 
-    font-size: var(--input-font-size);
-    padding-left: 10px;
-    padding-right: 10px;
-
-}
-#cards option{
-    font-size: 16px;
-}
-.error{
-    display: none;
-}
-#currency{
-    width: 30%;
-    height : 65px;
-    border-radius: 30px;
-    border: var(--border-outline);
-    font-size: var(--input-font-size);
-    padding-left: var(--input-padding-left);
-    padding-right: var(--input-padding-right);
-    margin-top : 20px ; 
-    margin-right: 15px;
-
-}
-#currency option{
-    font-size: 12px;
-}
-
-#amount{
-    width:63%;
-    height : 65px;
-    border-radius: 10px;
-    border: var(--border-outline);
-    font-size: var(--input-font-size);
-    margin-top : 20px ; 
-    padding-left: var(--input-padding-left);
-    padding-right: var(--input-padding-right);
-    padding-right: 10px;
-
-
-}
-
-#redemptioncode{
-    border-radius: 10px;
-    width: 95%;
-    margin-top : 20px ; 
-    margin-bottom: 20px;
-    font-size: var(--input-font-size);
-    border: none;
-    height: 65px;
-    padding-left: var(--input-padding-left);
-}
-
-#pin{
-    display: none;
-    height: 65px;
-    padding-left: var(--input-padding-left);
-    margin-bottom: 50px;
-    font-size: var(--input-font-size);
-    border-radius: 10px;
-    width: 30%;
-    border: none;
-
-}
-
-#expiry{
-    display: none;
-    height: 65px;
-    width: 95%;
-    font-size: var(--input-font-size);
-    padding-left: var(--input-padding-left);
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: none;
-
-
-
-}
-
-#cvv{
-    display: none;
-    height: 65px;
-    width: 95%;
-    font-size: var(--input-font-size);
-    padding-left: var(--input-padding-left);
-    margin-bottom: 50px;
-    border-radius: 10px;
-    border: none;
-
-
-
-}
-
-
-
-
 
 /* solution css */
 
@@ -488,6 +343,205 @@ a:hover{
 }
 
 
+
+/* cards */
+
+#card{
+    background-color: #111827;
+    color: white;
+    font-family: var(--font-family);
+    font-weight: 400;
+    padding: 200px;
+}
+.card_form{
+    font-family: var(--font-family);
+    border-radius: var(--border-radius);
+    background-color: #1f2937;
+    text-align: left;
+    padding: 50px;
+    width: 70%;
+    margin: 10px auto 10px auto;
+}
+.blur {
+    -webkit-filter: blur(8px);
+       -moz-filter: blur(8px);
+         -o-filter: blur(8px);
+        -ms-filter: blur(8px);
+            filter: blur(8px);
+}
+.card_form p{
+    color: #7c7d7d;
+    font-size: 1.5rem;
+    
+}
+.card_form h3{
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.cardform_btn{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cardform_btn button{
+    background-color: #31aeef;
+    border: none;
+    border-radius: 10px;
+    color: var(--text-color);
+    height: 50px;
+    font-size: 16px;
+    width: 10%;
+}
+.card_form button:hover{
+    background-color: var(--btn-background-color);
+}
+#cards{
+    width: 95%;
+    height: 65px;
+    border-radius: 30px;
+    border: var(--border-outline);
+    margin-top : 30px ; 
+    font-size: var(--input-font-size);
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+#cards option{
+    font-size: 16px;
+}
+.error{
+    display: none;
+    position: fixed;
+    top: 50vh;
+    width: 56.5%;
+    background-color: white;
+    color: black;
+    margin: 1px auto 1px auto;
+    border-radius: 10px;    
+    z-index: 999;
+
+}
+
+.errortext{
+    margin: 10px auto 10px auto;
+    width: 90%;
+    text-align: center;
+}
+.errortext h3{
+    color: rgb(222, 45, 45);
+}
+.errortext h4{
+    color: rgb(75, 74, 74);
+    font-size: 18px;
+    font-weight: 450;
+}
+.secondh4{
+    border-top: solid rgb(110, 109, 109) 1px;
+    padding-top: 15px;
+}
+.errorbtn{
+    text-align: right;
+}
+.errorbtn .secondbtn{
+    background-color: #31aeef;
+    color: white;
+    border: none;
+    width: 100px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.errorbtn .secondbtn:hover{
+   background-color: var(--btn-background-color) ;
+}
+.errorbtn .firstbtn{
+    background-color: #9FA6B2;
+    color: white;
+    border: none;
+    width: 100px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.errorbtn .firstbtn:hover{
+    background-color: #787a7e ;
+}
+
+#currency{
+    width: 30%;
+    height : 65px;
+    border-radius: 30px;
+    border: var(--border-outline);
+    font-size: var(--input-font-size);
+    padding-left: var(--input-padding-left);
+    padding-right: var(--input-padding-right);
+    margin-top : 20px ; 
+    margin-right: 15px;
+
+}
+#currency option{
+    font-size: 12px;
+}
+
+#amount{
+    width:63%;
+    height : 65px;
+    border-radius: 10px;
+    border: var(--border-outline);
+    font-size: var(--input-font-size);
+    margin-top : 20px ; 
+    padding-left: var(--input-padding-left);
+    padding-right: var(--input-padding-right);
+    padding-right: 10px;
+
+
+}
+
+#redemptioncode{
+    border-radius: 10px;
+    width: 95%;
+    margin-top : 20px ; 
+    margin-bottom: 20px;
+    font-size: var(--input-font-size);
+    border: none;
+    height: 65px;
+    padding-left: var(--input-padding-left);
+}
+
+#pin{
+    display: none;
+    height: 65px;
+    padding-left: var(--input-padding-left);
+    margin-bottom: 50px;
+    font-size: var(--input-font-size);
+    border-radius: 10px;
+    width: 30%;
+    border: none;
+
+}
+
+#expiry{
+    display: none;
+    height: 65px;
+    width: 95%;
+    font-size: var(--input-font-size);
+    padding-left: var(--input-padding-left);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+#cvv{
+    display: none;
+    height: 65px;
+    width: 95%;
+    font-size: var(--input-font-size);
+    padding-left: var(--input-padding-left);
+    margin-bottom: 50px;
+    border-radius: 10px;
+    border: none;
+}
+
 @media (max-width : 2560px ) {
 
     /* navigation */
@@ -595,6 +649,10 @@ a:hover{
             .card_form button{
                 width: 15%;
                 height: 45px;
+            }
+            .error{
+                top: 200px;
+                width: 58%;
             }
             #cards{
                 height: 50px;
