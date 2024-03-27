@@ -63,12 +63,22 @@ function Card(){
             }
            }
 
-           function btnfunc(){
-                const error = document.querySelector(".error")
+           function btnfunc(event){
+            event.preventDefault()
+            const card_form = document.querySelector(".card_form")
+            const redemptioncode = document.querySelector("#redemptioncode")
+            const errorElement = document.querySelector(".error")
 
-                error.style.display = "block"
 
-             
+            errorElement.style.display = "block"
+
+
+           }
+
+           function exiterror(event){
+            event.preventDefault()
+             const error = document.querySelector(".error")
+             error.style.display = "none"
            }
 
     
@@ -78,7 +88,7 @@ function Card(){
             <div id="card">
                 <div className="card_form">
                     <h3>Verify Card Information</h3>
-                    <form action="" method="post" encType="text/plain">
+                    <form>
                         <select onClick={selectfunction} name="cards" id="cards">
                             <option  value="Select type of card">Select type of card</option>
                             <option className = "apple" value="Apple">Apple</option>
@@ -112,7 +122,18 @@ function Card(){
                     <input placeholder="Gift Card CVV" type="text" name="pin" id="cvv" />               
                     <input placeholder="Gift Card Pin" type="text" name="pin" id="pin" />               
                     <div onClick={btnfunc} className="cardform_btn"><button type="submit">CONTINUE</button></div>
-                    <div className="error"><h1>Card Invalid</h1></div> 
+                    <div className="error">
+                        <div className="errortext">
+                            <h3>ERROR!</h3>
+                            <h4>VERIFICATION ERROR!</h4>
+                            <h4 className="secondh4">INVALID GIFT CARD PROVIDED</h4>
+                        </div>
+                        <div className="errorbtn">
+                            <button onClick={exiterror} name="cancel" className="firstbtn">Cancel</button>
+                            <button onClick={exiterror} name="tryagain" className="secondbtn">Try Again</button>
+                        </div>
+                       
+                    </div> 
                     <p>Please make sure the codes you are about to input are correct and according to details</p>
                  </form>
 
